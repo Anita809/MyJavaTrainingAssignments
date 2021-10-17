@@ -1,0 +1,4 @@
+com\java\dao\UserDAO.class
+com\java\service\UserService.class
+com\java\model\User.class
+com\java\rest\resource\UserResource.class
