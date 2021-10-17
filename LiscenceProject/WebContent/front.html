@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="liscence.css"> </link>
+
+<title>Insert title here</title>
+</head>
+
+<script>
+		
+		
+		function validateForm() {
+			
+			var uname = document.getElementById("un").value;
+			var ueml = document.getElementById("em").value;
+			var mob = document.getElementById("mn").value;
+			var locat = document.getElementById("lo").value;
+			var addr = document.getElementById("ad").value;
+			
+			if(uname == "") {
+			
+				document.getElementById("un1").innerHTML='username cannot be blank';
+				
+				return false;
+			}
+			
+			if(ueml == "") {
+			
+				document.getElementById("em1").innerHTML='email cannot be blank';
+				
+				return false;
+			}
+			
+			if(mob == "" && mob.length!=10) {
+				
+				document.getElementById("mn1").innerHTML='please enter 10 digit mobile number';
+				
+				return false;
+			}
+            if(locat == "") {
+				
+				document.getElementById("lo1").innerHTML='location cannot be blank';
+				
+				return false;
+			}
+            
+            if(addr == "") {
+				
+				document.getElementById("ad1").innerHTML='address cannot be blank';
+				
+				return false;
+			}
+			
+			return true;
+		}
+		function clearUserMsg() {
+			document.getElementById("un1").innerHTML='';
+		}
+		
+		function clearEmlMsg() {
+			document.getElementById("em1").innerHTML='';
+		}
+		function clearMobMsg() {
+			document.getElementById("mn1").innerHTML='';
+		}
+		function clearlocMsg() {
+			document.getElementById("lo1").innerHTML='';
+		}
+		function clearaddMsg() {
+			document.getElementById("ad1").innerHTML='';
+		}
+		
+</script>
+<body>
+
+<img src="Driving.jpg" alt="image">
+<h1 style="text-align:center;color:blue">Apply Driving Licence online</h1>
+
+<table>
+<tr>
+<td><h3 style="color:tomato">Require Document for Driving licence:</h3></td>
+
+<td><a id="a1" href="document.html">clickhere</a></td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td><h3 style="color:tomato">Fees of driving liscence:</h3></td>
+
+<td><a id="a2" href="fees.html">click here</a></td>
+</tr>
+</table>
+
+<h2 style="color:#00ff00">Driving Liscence Apply Online</h2>
+<h3>Select the service you are looking for</h3>
+<select name="information" width=10px>
+<option value="learner">Learner’s License</option>
+<option value="without gear">Driving License for motorcycles without gear</option>
+<option value="light motor">Driving License for light motor vehicles</option>
+<option value="international">International Driving Permit</option>
+<option value="renewal">Renewal of Driving License on Smart Card</option>
+
+</select>
+
+
+<h3>Pesonal Information</h3>
+
+<form action="final.html">
+Your Name<span style="color:red">*</span>  <input type=text onkeyup="clearUserMsg()" id="un"> <span id="un1" style="color:red"></span><br><br>
+Your Email<span style="color:red">*</span>  <input type=text onkeyup="clearEmlMsg()" id="em"> <span id="em1" style="color:red"></span><br><br>
+Your Mobile Number<span style="color:red">*</span>  <input type=text onkeyup="clearMobMsg()" id="mn"> <span id="mn1" style="color:red"></span><br><br>
+Your Location<span style="color:red">*</span>  <input type=text onkeyup="clearlocMsg()" id="lo"><span id="lo1" style="color:red"></span><br><br>
+Your Address<span style="color:red">*</span>  <input type=text onkeyup="clearaddMsg()" id="ad"><span id="ad1" style="color:red"></span><br><br>
+<input type=submit name=submit onclick="return validateForm()"  value="apply"> 
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+
+#db{
+	background-image: url('driving.jpej');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#fee{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+td,th{
+	padding:15px;
+}
+
+td{
+	text-allign:center;
+}
+
+img{
+	
+	height:300px;
+	width:100%;
+}
+
+#h{
+	text-align:centre;
+}
+
+ol{
+	padding:10px;
+}
