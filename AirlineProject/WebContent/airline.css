@@ -1,0 +1,54 @@
+body {
+	background-image: url('Airport2.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1 {
+	color:blue;
+	text-align: center;
+}
+
+h2 {
+	color:red;
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFE0;
+}
+
+#showflights {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: orange;
+}
+
+#register {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: green;
+}
+
+#sf{
+	background-video: url("plane.mp4");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*
+.mydiv {
+	background-color: red;
+}
+*/
+
+tR {
+	background-color: #ffffff;	
+}
+tH i
+	background-color: #BDB76B;
+}
+a {
+	text-align: center;
+}

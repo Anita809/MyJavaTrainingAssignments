@@ -1,0 +1,82 @@
+<html>
+<head>
+	<link rel="stylesheet" href="airline.css"> </link>
+</head>
+<script>
+		//alert('alert1 is here');
+		//console.log('alert2 is here');
+		//document.write('alert3 is here');
+		
+		function registervalidationForm() {
+			
+			var usname = document.getElementById("usr").value;
+			var mobnum = document.getElementById("ph").value;
+			var emid = document.getElementById("em1").value;
+			var upas = document.getElementById("pss").value;
+			
+			if(usname == "") {
+				//alert('username cannot be blank');
+				document.getElementById("msg1").innerHTML='username cannot be blank';
+				
+				return false;
+			}
+			
+			if(mobnum.length!=10) {
+		
+				document.getElementById("msg2").innerHTML='please enter 10 digit mobile number';
+				
+				return false;
+			}
+			if(emid == "") {
+			
+				document.getElementById("msg3").innerHTML='password cannot be blank';
+				
+				return false;
+			}
+			if(upas == "") {
+			
+				document.getElementById("msg4").innerHTML='password cannot be blank';
+				
+				return false;
+			}
+			
+			return true;
+		}
+		//function clearUserMsg() {
+			//document.getElementById("userErr").innerHTML='';
+		//}
+		
+	//	function clearPassMsg() {
+		//	document.getElementById("passErr").innerHTML='';
+		//}
+		
+</script>
+
+<body>
+ 
+	<h1>Airline Reservation System</h1>
+	<hl>
+	<h2> Register Here </h2>
+	
+	<form action="Login.html">
+	<table id="register">
+		<tr><td>Enter username </td><td><input type=text id="usr" name=username><span id="msg1" style="color:red">*</span> </td>
+		<tr><td>Enter Mobile number </td><td><input type="text" id="ph" name=mobilenumber><span id="msg2" style="color:red">*</span> </td>
+		<tr><td>Enter email </td><td><input type=email id="em1" name=usermail><span id="msg3" style="color:red">*</span></td>
+		<tr><td>Enter password </td><td><input type=password id="pss" name=usermail><span id="msg4" style="color:red">*</span> </td>
+		<tr><td>Enter birthdate </td><td><input type=date name=userdob> </td>
+		
+		
+		<tr> <td><input type=submit name=submit onclick="return registervalidationForm()" value="Register"> </td> </tr>
+		
+		<tr> <td colspan=2> Already registered? <a href="Login.html">Login</a> here <td> </tr>
+	</table>
+	
+	</form>
+	<div style="text-align:center">
+	<a href="SearchFlights.html">Back to Home</a>
+	</div>
+</body>
+
+</html>
+

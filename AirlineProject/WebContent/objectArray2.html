@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<script>
+	myemp1 = { employeeNumber:101,employeeName:"John",employeeSalary:5000 }
+		document.write(myemp1.employeeNumber+' ');
+		document.write(myemp1.employeeName+ ' ');
+		document.write(myemp1.employeeSalary);
+		
+		function showEmp() {
+			document.getElementById("empno").innerHTML=myemp1.employeeNumber;
+			document.getElementById("empname").innerHTML=myemp1.employeeName;
+			document.getElementById("empsal").innerHTML=myemp1.employeeSalary;
+		}
+		
+		fruits=["Mango","Apple","Orange"];
+		
+		for(i=0;i<fruits.length;i++) {
+			
+			document.write('<h3>'
+						+ 
+					fruits[i] + 
+				'</h3>');
+		}
+		//MVC
+		//CONTROLLER 
+		//REST API - DATA - MODEL -   CRUD 
+		//java script is acting as a VIEW
+		
+		mydept = [
+			
+			{ 
+				deptNumber:10, deptName:"Accounts",deptLocation:'New York',
+				mystaff : [
+					{ employeeNumber:101,employeeName:"Bruce",employeeSalary:5000,empImg:'bruce.jpeg' },
+					{ employeeNumber:102,employeeName:"James",employeeSalary:6000,empImg:'james.jpeg' },
+					{ employeeNumber:103,employeeName:"Steve",employeeSalary:7000,empImg:'steve.jpeg' }
+				]
+			},
+
+			{ 
+				deptNumber:20, deptName:"IT",deptLocation:'New Jersey',
+				mystaff : [
+					{ employeeNumber:104,employeeName:"Jack",employeeSalary:2000,empImg:'bruce1.jpeg' },
+					{ employeeNumber:105,employeeName:"Jill",employeeSalary:3000,empImg:'james2.jpeg' },
+					{ employeeNumber:106,employeeName:"Jane",employeeSalary:4000,empImg:'steve3.jpeg' }
+				]
+			},
+
+			{ 
+				deptNumber:30, deptName:"Sales",deptLocation:'Chicago',
+				mystaff : [
+					{ employeeNumber:107,employeeName:"Reeta",employeeSalary:5000,empImg:'bruce4.jpeg' },
+					{ employeeNumber:108,employeeName:"Seeta",employeeSalary:6000,empImg:'james5.jpeg' },
+					{ employeeNumber:109,employeeName:"Geeta",employeeSalary:7000,empImg:'steve6.jpeg' }
+				]
+			},
+
+			{ 
+				deptNumber:40, deptName:"Operations",deptLocation:'Dallas',
+				mystaff : [
+					{ employeeNumber:110,employeeName:"Julie",employeeSalary:8000,empImg:'bruce7.jpeg' },
+					{ employeeNumber:111,employeeName:"Julia",employeeSalary:9000,empImg:'james8.jpeg' },
+					{ employeeNumber:112,employeeName:"Silvie",employeeSalary:9500,empImg:'steve9.jpeg' }
+				]
+			},
+
+			
+		];
+		
+		
+		document.write('<table border=5 cellspacing=10 cellpadding=10> '+	
+				'<thead>	<th>Dept No.</th>	<th>Department Name</th>'+
+				'<th>Dept Location</th>'+
+			'</thead>');
+		for(i=0;i<mydept.length;i++) {
+			
+				document.write('<tr>');
+					document.write('<td>'+mydept[i].deptNumber +'</td>');
+					document.write('<td>'+mydept[i].deptName +'</td>');
+					document.write('<td>'+mydept[i].deptLocation +'</td>');
+					//document.write('<td> <img src='+mydept[i].mystaff[j].empImg +' height=200 width=300></td>');
+				
+					document.write("<td>");
+			document.write('<table border=5 cellspacing=10 cellpadding=10> '+	
+					'<thead>	<th>Emp No.</th>	<th>Employee Name</th>'+
+					'<th>Emp Salary</th>'+
+				'</thead>');
+			for(j=0;j<mydept[i].mystaff.length;j++) {
+				document.write('<tr>');
+				document.write('<td>'+mydept[i].mystaff[j].employeeNumber +'</td>');
+				document.write('<td>'+mydept[i].mystaff[j].employeeName +'</td>');
+				document.write('<td>'+mydept[i].mystaff[j].employeeSalary +'</td>');
+			//	document.write('<td> <img src='+mydept[i].mystaff[j].empImg +' height=200 width=300></td>');
+				document.write('</tr>');
+				
+			}
+			document.write('</table>');
+			document.write("</td>");
+			document.write('</tr>');
+		}
+		
+		document.write('</table>');
+		
+	</script>
+<body>
+	<br>
+	Employee Number is <span id="empno"></span> <br>
+	Employee Name   is <span id="empname"></span> <br>
+	Employee Salary is <span id="empsal"></span> <br>
+	<button onclick="showEmp()">Show Employee</button>
+</body>
+</html>

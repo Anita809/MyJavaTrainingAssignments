@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<script>
+	mydept = { departmentNumber:10,departmentName:"John",departmentLocation:"Bangalore }
+		document.write(mydept.departmentNumber+' ');
+		document.write(mydept.departmentName+ ' ');
+		document.write(mydept.departmentLocation);
+		
+		function showEmp() {
+			document.getElementById("empno").innerHTML=myemp1.employeeNumber;
+			document.getElementById("empname").innerHTML=myemp1.employeeName;
+			document.getElementById("empsal").innerHTML=myemp1.employeeSalary;
+		}
+		
+		//fruits=["Mango","Apple","Orange"];
+		
+	//	for(i=0;i<fruits.length;i++) {
+			
+		//	document.write('<h3>'
+			//			+ 
+				//	fruits[i] + 
+				//'</h3>');
+		}
+		//MVC
+		//CONTROLLER 
+		//REST API - DATA - MODEL -   CRUD 
+		//java script is acting as a VIEW
+		departlist = [
+			{ departmentNumber:10,departmentName:"Police department",departmentLocation:"chennai" },
+		    { departmentNumber:11,departmentName:"Health department",departmentLocation:"bangalore" },
+			{ departmentNumber:12,departmentName:"Railway department",departmentLocation:"mysore" }			
+		];
+		
+		document.write('<table border=5 cellspacing=10 cellpadding=10> '+	
+				'<thead>	<th>Dept No.</th>	<th>Dept Name</th>'+
+				'<th>Dept Location</th>'+
+			'</thead>');
+		
+		for(i=0;i<departlist.length;i++) {
+			document.write('<tr>');
+			
+			document.write('<td>'+departlist[i].departmentNumber +'</td>');
+			document.write('<td>'+departlist[i].departmentName +'</td>');
+			document.write('<td>'+departlist[i].departmentLocation +'</td>');
+			//document.write('<td> <img src='+mystaff[i].empImg +' height=200 width=300></td>');
+			document.write('</tr>');
+			
+		}
+		
+		document.write('</table>');
+		
+	</script>
+<body>
+	<br>
+	Employee Number is <span id="empno"></span> <br>
+	Employee Name   is <span id="empname"></span> <br>
+	Employee Salary is <span id="empsal"></span> <br>
+	<button onclick="showEmp()">Show Employee</button>
+</body>
+</html>
